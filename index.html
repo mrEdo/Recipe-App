@@ -10,10 +10,11 @@
 
 	<div ng-app="recipeApp" ng-controller="recipeController">
 
-		<input id="veg" name="healthOptions" type="radio" value="vegan"> Vegan <br>
-		<input id="whe" name="healthOptions" type="radio" value="wheatFree"> Wheat Free <br>
-		<input id="lws" name="healthOptions" type="radio" value="lowSugar"> Low Sugar <br>
-		<input id="lwf" name="healthOptions" type="radio" value="lowFat"> Low Fat<br>
+		<select name="hParams" id="healthParameters">
+			<option value="vegan">Vegan</option>
+			<option value="low-fat">Low Fat</option>
+			<option value="gluten-free">Gluten Free</option>
+		</select>
 
 		<hr>
 

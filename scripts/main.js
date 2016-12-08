@@ -6,7 +6,7 @@ var app = angular.module('recipeApp',[]);
 app.controller('recipeController', function($scope, $http){
 	$scope.getRecipes = function(){
 		//alert();
-		var recipeString = 'https://api.edamam.com/search?q=' + $('#search').val() + '&app_id=5e28d891&app_key=0f64478a1652306c913f25fbc520452a&health=vegan&diet=high-protein';
+		var recipeString = 'https://api.edamam.com/search?q=' + $('#search').val() + '&app_id=5e28d891&app_key=0f64478a1652306c913f25fbc520452a';
 		var healthParams;
 		// if( $("#veg:checked").val() == $("#veg").val() ){
 		// 	healthParams += '&health=vegan';
