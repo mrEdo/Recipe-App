@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>WEEK 12 RECIPE APP</title>
+	<link rel="stylesheet" href="styles/main.css" type="text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+</head>
+<body>
+
+	<div ng-app="recipeApp" ng-controller="recipeController">
+
+		<input id="veg" name="healthOptions" type="radio" value="vegan"> Vegan <br>
+		<input id="whe" name="healthOptions" type="radio" value="wheatFree"> Wheat Free <br>
+		<input id="lws" name="healthOptions" type="radio" value="lowSugar"> Low Sugar <br>
+		<input id="lwf" name="healthOptions" type="radio" value="lowFat"> Low Fat<br>
+
+		<hr>
+
+
+		<input type="text" id="search" placeholder="search">
+		<input type="button" id="button" ng-click="getRecipes()" value="Search Recipes">
+		<div id="listArea">
+			<div class="recipeItem" ng-repeat="x in recipes">
+				<a href="{{ x.recipe.url }}"><h1>{{ x.recipe.label }}</h1></a>
+				<img src="{{ x.recipe.image }}" alt="">
+				<h4>Serves: {{ x.recipe.yield }}</h4>
+				<ul>
+					<li ng-repeat="y in x.recipe.ingredientLines">{{ y }}</li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="scripts/jquery.js"></script>
+	<script src="scripts/main.js"></script>
+</body>
+</html>
